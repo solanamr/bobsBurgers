@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector} from 'react-redux';
-import { reset, detailCharacter } from '../../redux/actions'
+import { detailCharacter, reset } from '../../redux/actions'
 import { useEffect } from 'react';
 
 export default function Detail(){
@@ -10,12 +10,12 @@ export default function Detail(){
     const { id } = useParams()
 
     useEffect(() =>{
-        dispatch(detailCharacter(id))
         dispatch(reset())
+        dispatch(detailCharacter(id))
     },[dispatch, (id)])
 
-    const detailsCharacter = useSelector((state)=> state.detail)
-    console.log(detailsCharacter, 'detail')
+   const characterDetails = useSelector(state => state.detail)
+   console.log(characterDetails, 'selector')
 
 
     return(
@@ -28,14 +28,14 @@ export default function Detail(){
 
             <div>
                 {
-                    detailsCharacter.length > 0 ?
+                    characterDetails ?
                         <div>
-                            <h1>{detailsCharacter[0].name}</h1>
-                            <img src={detailsCharacter[0].image} alt="" />
-                            <h3>{detailsCharacter[0].occupation}</h3>
+                            <img src={characterDetails.image} alt="" />
+                            <h1>{characterDetails.name}</h1>
+                            <h3>{characterDetails.occupation}</h3>
                         </div>
                         : 
-                        null
+                        <p>loading</p>
                 }
             </div>
                  
@@ -49,22 +49,15 @@ export default function Detail(){
 
 //     return (
 //       <div
-//         style={{
-//           width: "100vw",
-//           height: "100vh",
-//           display: "flex",
-//           justifyContent: "center",
-//           alignItems: "center",
-//           marginTop: "-10rem",
-//           marginLeft: "3rem",
-//         }}
+// 
+//        
 //       >
 //         <Loader />
 //       </div>
 //     );
 //   } else {
 //     return (
-//       <div className="paginado2">
+//       
 //         <div>
 //           <Link to="/home">
 //             <button className="botonDetails" onClick={resState}>

@@ -1,0 +1,104 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.btnNext {
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+   }
+   
+   .btnNext:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   .btnNext:hover {
+    color: #fff;
+   }
+   
+   .btnNext:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .btnNext:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   .btnNext:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+   }
+
+
+   .btnPrev {
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+   }
+   
+   .btnPrev:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   .btnPrev:hover {
+    color: #fff;
+   }
+   
+   .btnPrev:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .btnPrev:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   .btnPrev:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+   }

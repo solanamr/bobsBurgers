@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import {getAllCharacters} from '../../redux/actions'
 import Characters from "../Characters/Characters";
 import Pagination from "../Pagination/Pagination";
-import SearchBar from "../SearchBar/SearchBar";
+import NavBar from "../../NavBar/NavBar";
+import style from './homeStyles.module.css'
 
 export default function Home(){
 
@@ -27,26 +28,33 @@ export default function Home(){
 
     return(
         <div>
-            <SearchBar setCurrentPage={setCurrentPage}/>
+            <div className={style.contenedor}>
+            <NavBar/>
 
              <Pagination currentPage={currentPage} setCurrentPage ={setCurrentPage} 
              characterPerPage = {characterPerPage} paginado = {paginado}/>
+
             <div>
+                <div className={style.characters}>
                 {
                     currentCharacter.length > 0 ? currentCharacter.map(c =>{
                         return(
                             <div>
-                                <Link to= {`/characters/${c.id}`}>
-                                <Characters name = {c.name} image = {c.image}/>
+                                <Link to= {`/characters/${c.id}`} style={{ textDecoration: "none" }}>
+                                <Characters name = {c.name} image = {c.image} occupation = {c.occupation}/>
                                 </Link>
                             </div>
                         )
                     })
                     :
-                    <div>
-                        <h1>Loading...</h1>
-                    </div>
+                    <div className="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
                 }
+                </div>
+             </div>
+             <Pagination currentPage={currentPage} setCurrentPage ={setCurrentPage} 
+             characterPerPage = {characterPerPage} paginado = {paginado}/>
             </div>
         </div>
     )

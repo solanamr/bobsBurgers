@@ -1,6 +1,5 @@
 
 
-
 const initialState = {
     characters: [],
     charactersCopy: [],
@@ -21,18 +20,16 @@ export default function reducer(state = initialState, action){
                 action.payload === ""
                 ? state.charactersCopy
                 : state.charactersCopy.filter((e) =>
-                e.name.toLowerCase().includes(action.payload.toLowerCase())
+                e.name.toLowerCase().includes(action.payload)
                 );
             return {
             ...state,
             characters: nombres
             }
-
-            case "CHARACTER_DETAIL":
+            case "GET_CHARACTER_ID":
                 return{
                     ...state,
                     detail: action.payload
-                    
                 }
 
             case "RESET_CHARACTER":

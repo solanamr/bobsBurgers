@@ -1,0 +1,16 @@
+.contenedor{
+    background-image: url(../../assets/images/ca8d69e0113a28c891bffabf1d6eea5b.jpg);
+    width: 100vw;
+    background-size: cover;
+    
+}
+
+
+.characters{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    
+}

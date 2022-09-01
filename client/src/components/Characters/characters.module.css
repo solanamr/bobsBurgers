@@ -1,0 +1,24 @@
+.contenedor{
+    background-color: #FFFB50;
+    margin: 2em;
+    width: 14em;
+    height: 21em;
+    border-radius: 5%;
+    
+}
+
+.h2{
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0.9em;
+    text-decoration: none;
+}
+
+.img{
+    width: 12em;
+    height: 12em;
+    margin-top: 1.7em;
+    border-radius: 20%;
+    border: 1px solid black;
+
+}
