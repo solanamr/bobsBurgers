@@ -1,16 +1,17 @@
 .container{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+
 }
 
 
 .btnNext {
-    --color: #560bad;
-    font-family: inherit;
+    --color: #000000;
+    font-family: 'Roboto', sans-serif;
     display: inline-block;
     width: 8em;
     height: 2.6em;
-    line-height: 2.5em;
+    /* line-height: 2.5em; */
     margin: 20px;
     position: relative;
     overflow: hidden;
@@ -21,6 +22,7 @@
     border-radius: 6px;
     font-weight: 500;
     color: var(--color);
+    background-color: rgba(38, 51, 54, 0);
    }
    
    .btnNext:before {
@@ -49,18 +51,18 @@
    }
    
    .btnNext:active:before {
-    background: #3a0ca3;
+    background: #000000;
     transition: background 0s;
    }
 
 
    .btnPrev {
-    --color: #560bad;
+    --color: #000000;
     font-family: inherit;
     display: inline-block;
     width: 8em;
     height: 2.6em;
-    line-height: 2.5em;
+    /* line-height: 2.5em; */
     margin: 20px;
     position: relative;
     overflow: hidden;
@@ -71,6 +73,7 @@
     border-radius: 6px;
     font-weight: 500;
     color: var(--color);
+    background-color: rgba(38, 51, 54, 0);
    }
    
    .btnPrev:before {
@@ -99,6 +102,6 @@
    }
    
    .btnPrev:active:before {
-    background: #3a0ca3;
+    background: #000000;
     transition: background 0s;
    }

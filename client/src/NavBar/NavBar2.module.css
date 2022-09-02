@@ -1,0 +1,19 @@
+@font-face { font-family: 'BobBurgers'; 
+    src: url('../assets/fonts/Bob\'s\ Burgers.ttf'); } 
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #ABED57;
+    height: 3.5em;
+}
+
+.p{
+    margin-left: 3em;
+    margin-top: -0.2em;
+    color: black;
+    font-family: 'BobBurgers';
+    font-size: 3em;
+}

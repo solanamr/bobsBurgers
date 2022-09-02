@@ -3,6 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector} from 'react-redux';
 import { detailCharacter, reset } from '../../redux/actions'
 import { useEffect } from 'react';
+import style from './detail.module.css';
+import NavBar2 from "../../NavBar/NavBar2";
+import Footer from "../Footer/Footer";
 
 export default function Detail(){
     
@@ -20,25 +23,30 @@ export default function Detail(){
 
     return(
         <div>
-            <div>
-            <Link to = '/'>
-                    <button>Back</button>
-                </Link>
-            </div>
+            <div className={style.container}>
+                <NavBar2/>
+                <div className={style.containerBtn}>
+                    <Link to = '/'>
+                        <button className={style.btn}>Back</button>
+                    </Link>
+                </div>
 
-            <div>
-                {
-                    characterDetails ?
+                <div>
+                    <div className={style.box}>
+                    {
+                        characterDetails ?
                         <div>
-                            <img src={characterDetails.image} alt="" />
-                            <h1>{characterDetails.name}</h1>
-                            <h3>{characterDetails.occupation}</h3>
+                                <img src={characterDetails.image} alt=""  className={style.img}/>
+                                <h1 className={style.h1}>{characterDetails.name}</h1>
+                                <h3>{characterDetails.occupation}</h3>
+                            </div>
+                            : 
+                            <p>loading</p>
+                        }
                         </div>
-                        : 
-                        <p>loading</p>
-                }
+                </div>
             </div>
-                 
+                <Footer/>
         </div>
     )
 }

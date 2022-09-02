@@ -6,6 +6,7 @@ import Characters from "../Characters/Characters";
 import Pagination from "../Pagination/Pagination";
 import NavBar from "../../NavBar/NavBar";
 import style from './homeStyles.module.css'
+import Footer from "../Footer/Footer";
 
 export default function Home(){
 
@@ -39,7 +40,7 @@ export default function Home(){
                 {
                     currentCharacter.length > 0 ? currentCharacter.map(c =>{
                         return(
-                            <div>
+                            <div className={style.character}>
                                 <Link to= {`/characters/${c.id}`} style={{ textDecoration: "none" }}>
                                 <Characters name = {c.name} image = {c.image} occupation = {c.occupation}/>
                                 </Link>
@@ -53,8 +54,11 @@ export default function Home(){
                 }
                 </div>
              </div>
+
              <Pagination currentPage={currentPage} setCurrentPage ={setCurrentPage} 
              characterPerPage = {characterPerPage} paginado = {paginado}/>
+
+             <Footer/>
             </div>
         </div>
     )
