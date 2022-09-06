@@ -4,16 +4,16 @@
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: .9vw;
+    font-size: .8em;
     color: rgb(0, 0, 0);
     background-color: #ABED57;
     box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
     border-radius: 0.4vw;
     border: none;
     outline: none;
-    padding: 0.6vw;
+    padding: 0.6em;
     width: 20em;
-    max-width: 190px;
+    max-width: 30em;
     transition: .4s;
 }
 
@@ -24,3 +24,16 @@
   .input:focus {
     box-shadow: 0 0 0 .15vw rgb(0, 0, 0);
   }
+
+
+  @media screen and (max-width: 32em){
+   .input{
+    margin-right: 1em;
+    margin-top: 0.8em;
+    padding: 0.6em;
+    width: 15em;
+    max-width: 20em;
+    font-weight: 700;
+    font-size: .7em;
+   }
+}

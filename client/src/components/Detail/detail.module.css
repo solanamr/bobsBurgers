@@ -1,5 +1,5 @@
 .container{
-    background-color: #fffc507a;
+    background-color: #8DC2F8;
     height: 42.8vw;
 }
 
@@ -11,7 +11,7 @@
     margin-left: 24em;
     margin-top: 2em;
     padding: 1em;
-    background-color: #8DC2F8;
+    background-color: #fffc50d4; 
     border: 1px solid black;
     border-radius: 5%;
 }
@@ -78,3 +78,40 @@
     background: #000000;
     transition: background 0s;
    }
+
+
+   @media screen and (max-width: 75em){
+    .container{
+        height: 48em;
+    }
+    
+    .box{
+        margin-left: 13em;
+        margin-top: 5em;
+    }
+
+   }
+
+   @media screen and (max-width: 48em){
+    .container{
+        height: 48em;
+    }
+    
+    .box{
+        margin-left: 13em;
+        margin-top: 5em;
+    }
+
+   }
+   
+
+   @media screen and (max-width: 32em){
+    .container{
+        height: 48em;
+    }
+    
+    .box{
+        margin-left: 7em;
+        margin-top: 5em;
+    }
+}

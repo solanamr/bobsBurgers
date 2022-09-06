@@ -48,7 +48,7 @@ export default function Home(){
                         )
                     })
                     :
-                    <div className="spinner-grow text-primary" role="status">
+                    <div class="spinner-grow text-primary" role="status" className={style.loader}>
                     <span class="visually-hidden">Loading...</span>
                   </div>
                 }

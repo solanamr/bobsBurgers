@@ -17,3 +17,13 @@
     font-family: 'BobBurgers';
     font-size: 3em;
 }
+
+@media screen and (max-width: 32em){
+    .p{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    margin-top: 0.2em;
+    font-size: 1.8em;
+    }
+}
