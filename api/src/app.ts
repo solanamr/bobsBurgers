@@ -1,5 +1,5 @@
 import express from 'express';
-import './db';
+import './db.ts';
 import dotenv from 'dotenv';
 dotenv.config();
 import morgan from 'morgan';
