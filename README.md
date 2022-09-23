@@ -3,7 +3,7 @@
 #Hello! 👋
 
 Welcome to my SPA about the characters of one of my favorites shows: Bob's Burgers. 
-I made this project so I could learn MongoDB for connected the database to the backend, that's why it's a small project.
+I made this project so I could learn MongoDB to connect the database to the backend, that's why it's a small project.
 It's a fullstack development, that includes: 
 -React 
 -Redux 
